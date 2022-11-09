@@ -63,5 +63,5 @@ readFile('./input.txt', 'utf8', (err, data) => {
   })
   const points = input[input.length - 1].split(' ').map(Number)
   const result = findPoints(segments, points)
-  console.log(result.join(' '))
+  writeFile('./output.txt', result.join(' '), () => {})
 })
